@@ -22,6 +22,8 @@ import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.text.format.DateFormat;
 import android.view.View;
 
+import com.android.internal.logging.MetricsProto.MetricsEvent;
+
 import cyanogenmod.preference.CMSystemSettingListPreference;
 
 import com.android.settings.R;
@@ -47,6 +49,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     private CMSystemSettingListPreference mStatusBarAmPm;
     private CMSystemSettingListPreference mStatusBarBattery;
     private CMSystemSettingListPreference mStatusBarBatteryShowPercent;
+
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsEvent.APPLICATION;
+        }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

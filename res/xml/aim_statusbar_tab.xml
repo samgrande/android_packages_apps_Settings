@@ -18,6 +18,7 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout="@layout/tab"
     android:title="@string/aim_statusbar_title">
 
@@ -137,14 +138,6 @@
             android:key="qs_show_brightness_slider"
             android:title="@string/status_bar_brightness_slider_title"
             android:summary="@string/status_bar_brightness_slider_summary"
-            android:defaultValue="true" />
-
-        <cyanogenmod.preference.CMSecureSettingSwitchPreference
-            android:key="qs_show_auto_brightness"
-            android:title="@string/status_bar_brightness_slider_auto_title"
-            android:summary="@string/status_bar_brightness_slider_auto_summary"
-            android:dependency="qs_show_brightness_slider"
-            lineage:requiresConfig="@*android:bool/config_automatic_brightness_available"
             android:defaultValue="true" />
 
         <cyanogenmod.preference.CMSystemSettingSwitchPreference
